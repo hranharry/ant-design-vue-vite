@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import moment from 'moment';
 import omit from 'lodash/omit';
 import MonthCalendar from '../vc-calendar/src/MonthCalendar';
 import VcDatePicker from '../vc-calendar/src/Picker';
@@ -23,7 +23,7 @@ import { formatDate } from './utils';
 //   value?: moment.Moment;
 //   prefixCls: string;
 // }
-function noop() {}
+function noop() { }
 export default function createPicker(TheCalendar, props) {
   return {
     props: initDefaultProps(props, {

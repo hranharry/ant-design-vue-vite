@@ -27,4 +27,4 @@ req.keys().forEach(mod => {
   }
 });
 
-module.exports = require('./components');
+export * from './components';

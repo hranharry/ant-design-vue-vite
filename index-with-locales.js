@@ -1,4 +1,4 @@
-const antd = require('./components');
+import antd from './components';
 const req = require.context('./components', true, /^\.\/locale-provider\/(?!__tests__).+_.+\.js$/);
 
 antd.locales = {};

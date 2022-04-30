@@ -7,7 +7,8 @@ import { getStyle, getListeners } from '../../_util/props-util';
 import InnerSlider from './inner-slider';
 import defaultProps from './default-props';
 import { canUseDOM } from './utils/innerSliderUtils';
-const enquire = canUseDOM() && require('enquire.js');
+import enquireJs from 'enquire.js';
+const enquire = canUseDOM() && enquireJs;
 
 Vue.use(ref, { name: 'ant-ref' });
 
@@ -88,7 +89,7 @@ export default {
     }
   },
   beforeDestroy() {
-    this._responsiveMediaHandlers.forEach(function(obj) {
+    this._responsiveMediaHandlers.forEach(function (obj) {
       enquire.unregister(obj.query, obj.handler);
     });
   },
